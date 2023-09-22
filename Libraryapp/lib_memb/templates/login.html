@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}Log In{% endblock title %}
+{% block content %}
+{% comment %} <script>function myFunction() {
+    var x = document.getElementById("myInput");
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
+    }
+  }</script> {% endcomment %}
+<div class='container mydiv'>
+    <div class='mx-5 px-10 row-1'>
+        
+
+    </div>
+    <div class='mx-5 px-10 mycss'>
+        <center><strong><p>Log in with you account</p></strong></center>
+        <form methode="post" class="d-flex"  action="{% url 'login_in' %}">
+            {% csrf_token %}
+
+            <div class="mb-3">
+                <input type="email" placeholder='Email address' class="form-control"  name="emailflied" id="exampleInputEmail1" aria-describedby="emailHelp">
+                
+
+            </div>
+            <div class="mb-3">
+                <input type="password" placeholder='Password' class="form-control" name="passwordfield" id="exampleInputPassword1">
+            </div> 
+            {% comment %} <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                 <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div> {% endcomment %}
+            <button type="submit" class="btn btn-primary">Submit</button><br>
+            <a class="item" href= {% url 'reg' %}>Create New Account</a>
+    </form>
+    </div>
+</div>
+{% endblock content %}

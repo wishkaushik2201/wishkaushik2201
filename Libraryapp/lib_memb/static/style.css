@@ -1,0 +1,10 @@
+.mycss{
+    display:inline-block;
+    vertical-align: top;
+    height: 456px;
+    width: 396px;
+}
+.mydiv{
+    display: block;
+    text-align: right;
+}
